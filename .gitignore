@@ -3,5 +3,5 @@
 *.xd
 .DS_Store
 .prettierignore
-.README.md
-.README-template.md
+README.md
+README-template.md
