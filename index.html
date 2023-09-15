@@ -2,51 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
   <title>Frontend Mentor | Interactive card details form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  <img src="./img/card-logo.svg" alt="">
-  <img src="./img/icon-complete.svg" alt="">
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
+  <main class="credit-card">
+    <section class="cards-details">
+      <div class="front-card">
+        <img src="./images/svgs/card-logo.svg" alt="">
+        <div class="front-card-details">
+          <p>0000 0000 0000 0000</p>
+          <span>Jane Appleseed</span>
+          <span>00/00</span>
+        </div>
+      </div>
 
-  000
+      <div class="back-card">
+        <span class="cvc">000</span>
+      </div>
+    </section>
 
-  Cardholder Name
-  e.g. Jane Appleseed
+    <section class="card-form">
+      <form>
+        <fieldset>
+          <label>Cardholder Name</label>
+          <input type="text" placeholder="e.g. Jane Appleseed">
 
-  Card Number
-  e.g. 1234 5678 9123 0000
+          <label>Card Number</label>
+          <input type="text" placeholder="e.g. 1234 5678 9123 0000">
 
-  Exp. Date (MM/YY)
-  MM
-  YY
+          <label>Exp. Date (MM/YY)</label>
+          <div class="exp-date">
+            <input type="number" placeholder="MM">
+            <input type="number" placeholder="YY">
+          </div>
 
-  CVC
-  e.g. 123
+          <label>CVC</label>
+          <input type="number" placeholder="e.g. 123">
 
-  Confirm
+          <button>Confirm</button>
+        </fieldset>
+      </form>
+    </section>
 
-  <!-- Completed state start -->
-
-  Thank you!
-  We've added your card details
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <div class="success">
+      <img src="./images/svgs/icon-complete.svg" alt="">
+      <h1>Thank you!</h1>
+      <p>We've added your card details</p>
+      <button>Continue</button>
+    </div>
+  </main>
 </body>
 </html>
