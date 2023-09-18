@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  
   <link rel="icon" type="image/png" sizes="32x32" href="./images/icons/favicon-32x32.png">
   <title>Frontend Mentor | Interactive card details form</title>
 </head>
@@ -32,14 +37,14 @@
           <label>Card Number</label>
           <input type="text" placeholder="e.g. 1234 5678 9123 0000">
 
-          <label>Exp. Date (MM/YY)</label>
-          <div class="exp-date">
+          <div class="expiration-date">
+            <label>Exp. Date (MM/YY)</label>
             <input type="number" placeholder="MM">
             <input type="number" placeholder="YY">
-          </div>
 
-          <label>CVC</label>
-          <input type="number" placeholder="e.g. 123">
+            <label>CVC</label>
+            <input type="number" placeholder="e.g. 123">
+          </div>
 
           <button>Confirm</button>
         </fieldset>
