@@ -212,6 +212,13 @@ img {
   cursor: pointer;
 }
 
+.error-text {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--input-errors);
+  max-width: 102px;
+}
+
 @media (max-width: 375px) {
   .credit-card {
     flex-direction: column;
