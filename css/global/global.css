@@ -1,0 +1,31 @@
+body {
+  min-height: 100vh;
+  font-size: 18px;
+}
+
+fieldset {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.credit-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1260px;
+}
+
+.credit-card,
+[placeholder] {
+  font-family: var(--main-font-family);
+}
+
+.error-text {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--input-errors);
+  max-width: 102px;
+}

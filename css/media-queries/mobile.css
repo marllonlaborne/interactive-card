@@ -1,0 +1,73 @@
+@media (max-width: 375px) {
+  .credit-card {
+    flex-direction: column;
+    width: 375px;
+  }
+  .cards-details {
+    background: url('/images/backgrounds/bg-main-mobile.png') no-repeat;
+    width: 100%;
+    height: 315px;
+  }
+  .front-card {
+    max-height: 100%;
+    width: 300px;
+    top: 80px;
+    left: 10px;
+    background: url('/images/backgrounds/bg-card-front.png') center/contain no-repeat;
+    padding: 20px;
+    z-index: 1;
+  }
+  .front-card img {
+    margin-top: 35px;
+    width: 55px;
+  }
+  .front-card-details p {
+    margin-bottom: 6px;
+    font-size: 1.1rem;
+  }
+  .front-card-details span {
+    font-size: .65rem;
+  }
+  .front-card-details span:last-child {
+    margin-left: 100px;
+  }
+  .back-card {
+    max-height: 100%;
+    width: 300px;
+    top: -20px;
+    left: 60px;
+    background: url('/images/backgrounds/bg-card-back.png') center/contain no-repeat;
+    padding: 20px;
+  }
+  .back-card span {
+    font-size: 13px;
+    left: 216px;
+    top: 88px;
+  }
+  .card-form {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+  }
+  .card-form fieldset {
+    width: 350px;
+  }
+  .card-form input {
+    width: 350px;
+  }
+  .expiration-date {
+    width: 350px;
+  }
+  .expiration-date input:not(:last-child) {
+    width: 80px;
+  }
+  .expiration-date input:last-child {
+    margin-right: 30px;
+    width: 100%;
+  }
+  .success {
+    height: 380px;
+    width: 330px;
+    display: none;
+  }
+}

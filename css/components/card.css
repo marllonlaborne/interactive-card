@@ -1,0 +1,60 @@
+.cards-details {
+  height: 900px;
+  width: 820px;
+  display: flex;
+  flex-direction: row;
+  color: var(--white);
+  background: url('/images/backgrounds/bg-main-desktop.png') no-repeat;
+  position: relative;
+}
+
+.front-card {
+  height: 245px;
+  width: 447px;
+  top: 140px;
+  left: 140px;
+  position: absolute;
+  background: url('/images/backgrounds/bg-card-front.png') no-repeat;
+  padding: 30px;
+}
+
+.front-card-details {
+  margin-top: 50px;
+}
+
+.front-card-details p {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin-bottom: 22px;
+  letter-spacing: 3.4px;
+}
+
+.front-card-details span {
+  grid-row: 2;
+  font-size: 16px;
+  color: var(--light-grayish-violet);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+} 
+
+.front-card-details span:last-child {
+  margin-left: 162px;
+}
+
+.back-card {
+  height: 245px;
+  width: 447px;
+  top: 430px;
+  left: 230px;
+  position: absolute;
+  background: url('/images/backgrounds/bg-card-back.png') no-repeat;
+  padding: 30px;
+}
+
+.back-card span {
+  letter-spacing: 2px;
+  position: relative;
+  left: 336px;
+  top: 77px;
+  font-size: 14px;
+}
