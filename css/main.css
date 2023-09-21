@@ -1,0 +1,16 @@
+/* Custom CSS variables */
+@import './variables/root.css';
+
+/* Global styles */
+@import './global/global.css';
+
+/* CSS reset of default styles */
+@import './reset/reset.css';
+
+/* Styles for each component/section of the project */
+@import './components/card.css';
+@import './components/form.css';
+@import './components/success.css';
+
+/* Responsive styles for mobile devices */
+@import './media-queries/mobile.css'
