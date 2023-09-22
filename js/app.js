@@ -29,11 +29,36 @@ const validateFields = () => {
     if (field.classList.contains('month')) {
       if (!validateMonth(field.value)) valid = false
     }
+
+    if (field.classList.contains('year')) {
+      if (!validateYear(field.value)) valid = false
+    }
   })
 
   return valid
 }
 
+const validateYear = (year) => {
+  let valid = true
+  const yearInput = form.querySelector('.year')
+  year = year.trim()
+
+  if (!/^\d+$/.test(year)) {
+    addErrorMessage(yearInput, 'Invalid year')
+    yearInput.style.borderColor = 'var(--input-errors)'
+    valid = false
+  }
+
+  const yearValue = parseInt(year, 10)
+
+  if (yearValue.length > 3) {
+    addErrorMessage(yearInput, 'Year must be less than 3 digits')
+    yearInput.style.borderColor = 'var(--input-errors)'
+    valid = false
+  }
+
+  return valid
+}
 
 const validateMonth = (month) => {
   let valid = true
