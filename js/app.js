@@ -25,7 +25,40 @@ const validateFields = () => {
     if (field.classList.contains('card-number')) {
       if (!validateCardNumber(field.value)) valid = false
     }
+
+    if (field.classList.contains('month')) {
+      if (!validateMonth(field.value)) valid = false
+    }
   })
+
+  return valid
+}
+
+
+const validateMonth = (month) => {
+  let valid = true
+  const monthInput = form.querySelector('.month')
+  month = month.trim()
+
+  if (!/^\d+$/.test(month)) {
+    addErrorMessage(monthInput, 'Invalid month')
+    monthInput.style.borderColor = 'var(--input-errors)'
+    valid = false
+  }
+
+  const monthValue = parseInt(month, 10)
+
+  if (monthValue < 1 || monthValue > 12) {
+    addErrorMessage(monthInput, 'Month must be between 1 and 12')
+    monthInput.style.borderColor = 'var(--input-errors)'
+    valid = false
+  }
+
+  if (month.length > 3) {
+    addErrorMessage(monthInput, 'Month must be less than 3 digits')
+    monthInput.style.borderColor = 'var(--input-errors)'
+    valid = false
+  }
 
   return valid
 }
