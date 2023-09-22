@@ -27,5 +27,5 @@ img {
   margin-top: 5px;
   font-size: 12px;
   color: var(--input-errors);
-  max-width: 102px;
+  max-width: 120px;
 }
