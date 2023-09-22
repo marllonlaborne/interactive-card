@@ -33,8 +33,30 @@ const validateFields = () => {
     if (field.classList.contains('year')) {
       if (!validateYear(field.value)) valid = false
     }
+
+    if (field.classList.contains('cvc-form')) {
+      if (!validateCVC(field.value)) valid = false
+    }
   })
 
+  return valid
+}
+
+const validateCVC = (cvc) => {
+  let valid = true
+  const cvcInput = form.querySelector('.cvc-form')
+  cvc = cvc.trim()
+
+  if (!/^\d+$/.test(cvc)) {
+    addErrorMessage(cvcInput, 'Invalid CVC')
+    cvcInput.style.borderColor = 'var(--input-errors)'
+    valid = false
+  } else if (cvc.length !== 3) { 
+    addErrorMessage(cvcInput, 'CVC must be exactly 3 digits')
+    cvcInput.style.borderColor = 'var(--input-errors)'
+    valid = false
+  }
+  
   return valid
 }
 
