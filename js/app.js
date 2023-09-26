@@ -149,6 +149,31 @@ const validateCardNumber = (cardNumber) => {
   return valid
 }
 
+const handleCardsDisplay = (event) => {
+  const frontCardNumber = document.querySelector('.front-card p')
+  const frontCardName = document.querySelector('.front-card span:nth-child(2)')
+  const frontCardExpDate = document.querySelector('.front-card span:nth-child(3)')
+  const backCardCVC = document.querySelector('.cvc')
+
+  if (event.target.classList.contains('card-number')) {
+    const cardNumber = event.target.value
+    const formattedCardNumber = formatCardNumber(cardNumber)
+    frontCardNumber.innerText = formattedCardNumber
+  }
+
+  if (event.target.classList.contains('cardholder-name')) 
+    frontCardName.innerText = event.target.value
+
+  if (event.target.classList.contains('month') || event.target.classList.contains('year')) {
+    const month = document.querySelector('.month').value.slice(0, 2) || '00'
+    const year = document.querySelector('.year').value.slice(0, 2) || '00'
+    frontCardExpDate.innerText = `${month}/${year}`
+  }
+
+  if (event.target.classList.contains('cvc-form'))
+    backCardCVC.innerText = event.target.value.slice(0, 3)
+}
+
 const addErrorMessage = (field, message) => {
   const span = document.createElement('span')
   span.innerHTML = message
