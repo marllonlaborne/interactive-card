@@ -174,6 +174,14 @@ const handleCardsDisplay = (event) => {
     backCardCVC.innerText = event.target.value.slice(0, 3)
 }
 
+const formatCardNumber = (cardNumber) => {
+  const numericCardNumber = cardNumber.replace(/\D/g, '')
+  const rangeCardNumber = numericCardNumber.slice(0, 16)
+  const formattedCardNumber = rangeCardNumber.replace(/(\d{4})(?=\d)/g, '$1 ')
+
+  return formattedCardNumber
+}
+
 const addErrorMessage = (field, message) => {
   const span = document.createElement('span')
   span.innerHTML = message
