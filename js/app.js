@@ -182,3 +182,4 @@ const addErrorMessage = (field, message) => {
 }
 
 form.addEventListener('submit', handleSubmit)
+form.addEventListener('input', handleCardsDisplay)
