@@ -2,7 +2,24 @@ const form = document.querySelector('.card-form')
 
 const handleSubmit = (event) => {
   event.preventDefault()
-  validateFields()
+  const areFieldsValid = validateFields()
+  
+  if (areFieldsValid) {
+    setTimeout(() => {
+      const success = document.querySelector('.success')
+      const continueButton = document.querySelector('.success button')
+      
+      form.style.display = 'none'
+      success.style.display = 'flex'
+      
+      continueButton.addEventListener('click', () => {
+        const formInputs = form.querySelectorAll('input')
+        formInputs.forEach(input => input.value = '')
+        success.style.display = 'none'
+        form.style.display = 'flex'
+      })
+    }, 600)
+  }
 }
 
 const validateFields = () => {
