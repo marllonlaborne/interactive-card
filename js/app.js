@@ -19,7 +19,6 @@ const validateFields = () => {
       valid = false
     } else {
       field.style.borderColor = 'var(--light-grayish-violet)'
-      valid = true
     } 
     
     if (field.classList.contains('card-number')) {
